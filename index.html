@@ -124,12 +124,11 @@
 </head>
 <body>
 
-<audio id="oikeinAani" src="https://wikimedia.org" preload="auto"></audio>
-<audio id="vaarinAani" src="https://google.com" preload="auto"></audio>
+<audio id="backgroundMusic" src="https://upload.wikimedia.org/wikipedia/commons/d/df/Meow-Meow-by-Kjartan-Abel.ogg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" loop preload="auto"></audio>
 
 <div class="vocabulary-box">
     <!-- Tämä nappi poistaa laatikon näkyvistä puhtaalla HTML:llä ilman riskiä pelin hajoamisesta -->
-    <button type="button" class="close-vocab-btn" onclick="this.parentElement.style.display='none';">X</button>
+    <button type="button" class="close-vocab-btn" onclick="this.parentElement.style.display='none'; document.getElementById('avaaSanastoNappi').style.display='block';">X</button>
     <h3>Sanastoa 📝</h3>
     <ul>
         <li><strong>Este</strong> = Tämä</li>
@@ -142,8 +141,7 @@
     </ul>
 </div>
 
-<button type="button" id="avaaSanastoNappi" onclick="document.getElementById('sanakirjaLaatikko').style.display='block'; this.style.display='none';" 
-        style="position: fixed; top: 100px; right: 20px; z-index: 1000; display: none; background-color: #2563eb; color: white; padding: 12px 20px; font-weight: bold; border: 3px solid #111; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); cursor: pointer;">
+<button type="button" id="avaaSanastoNappi" onclick="document.querySelector('.vocabulary-box').style.display='block'; this.style.display='none';" style="position: fixed; top: 100px; right: 20px; z-index: 1000; display: none; background-color: #2563eb; color: white; padding: 12px 20px; font-weight: bold; border: 3px solid #111; border-radius: 12px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); cursor: pointer;">
      📝
 </button>
 
@@ -242,8 +240,6 @@
 <div id="tulos4" class="result-div"></div>
 <br><br>
 
-	
-	<br><br>
 <div style="background: rgba(255, 255, 255, 0.95); padding: 25px; display: inline-block; border-radius: 12px; border: 3px dashed #111; min-width: 320px;">
     <h3 style="color: #000; margin-top: 0;">Pelin lopputulos</h3>
     <button type="button" onclick="laskeKaikkiPisteet()" style="background-color: #2563eb; color: white; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; border: none; cursor: pointer;">Katso kokonaispisteet</button>
@@ -253,6 +249,15 @@
 <br><br>
 
 <script>
+// Tämä käsky kuuntelee koko sivua ja käynnistää taustaäänen heti, kun pelaaja klikkaa MITÄ TAHANSA kohtaa sivulla
+document.addEventListener('click', function() {
+    var taustaMusiikki = document.getElementById('backgroundMusic');
+    // Soitetaan musiikki vain jos se ei vielä soi, jottei se ala alusta joka klikkauksella
+    if (taustaMusiikki.paused) {
+        taustaMusiikki.play();
+    }
+}, { once: true }); // { once: true } varmistaa, että tämä koodi ajetaan vain kerran pelin alussa
+
 let pisteet = [0, 0, 0, 0];
 
 
@@ -307,8 +312,10 @@ function laskePisteet2() {
 
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Sí, este gato es muy gordo. 😊", "#15803d", "#f0fdf4");
+		document.getElementById('oikeinAani').play();
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
+		document.getElementById('vaarinAani').play();
     }
 }
 
@@ -325,8 +332,10 @@ function laskePisteet3() {
 
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Sí, este gato es muy gordo. 👍", "#15803d", "#f0fdf4");
+		document.getElementById('oikeinAani').play();
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
+		document.getElementById('vaarinAani').play();
     }
 }
 function laskePisteet4() {
@@ -341,8 +350,10 @@ function laskePisteet4() {
 
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Si, este gato no es un perro! 🐱", "#15803d", "#f0fdf4");
+		document.getElementById('oikeinAani').play();
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
+		document.getElementById('vaarinAani').play();
     }
 }
 // 5. Yhteispisteiden laskeminen
