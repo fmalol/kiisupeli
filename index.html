@@ -20,8 +20,12 @@
             margin: 20px auto;
             border: 3px solid #000;
             border-radius: 12px;
+			border-radius: 20% !important;
             background-color: white;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+			width: 300px;
+            height: 300px;
+            object-fit: cover;
         }
         /* Kysymyslaatikon tyylit - pakotetaan tekstit mustiksi */
         .question-card {
@@ -149,9 +153,9 @@
 
         myImage.src = 'https://user36342.na.imgto.link/public/20260925/1000146964.avif?__imgto_raw=1';
         myImage.alt = 'kissa1';
+		myImage.className = "quiz-img";
 
-        myImage.width = 300;
-        myImage.height = 300;
+        
 
         
         document.body.appendChild(myImage);
@@ -175,8 +179,8 @@
 <script>
      const img2 = document.createElement('img');
     img2.src = 'https://user36365.na.imgto.link/public/20260925/unnamed.avif'; 
-    img2.width = 300;
-    img2.height = 300;
+	img2.className = "quiz-img";
+    
     document.body.appendChild(img2);
 </script>
 
@@ -196,8 +200,8 @@
 <script>
      const img3 = document.createElement('img');
     img3.src = 'https://user46828.na.imgto.link/public/20261021/bdbe4a3ce42b091597357c5d-screenshot-2026-10-21-120423.avif'; 
-    img3.width = 300;
-    img3.height = 300;
+	img3.className = "quiz-img";
+    
     document.body.appendChild(img3);
 </script>
 
@@ -217,8 +221,8 @@
 <script>
      const img4 = document.createElement('img');
     img4.src = 'https://user46828.na.imgto.link/public/20261021/2791fd7ff55afb1f41d6abd7-screenshot-2026-10-21-145533.avif'; 
-    img4.width = 300;
-    img4.height = 300;
+	img4.className = "quiz-img";
+    
     document.body.appendChild(img4);
 </script>
 	<form id="quizForm4" onsubmit="return false;">
