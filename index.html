@@ -120,6 +120,10 @@
             background: #e60000;
         }
 		
+		#osio2, #osio3, #osio4 {
+            display: none;
+        }
+		
     </style>
 </head>
 <body>
@@ -150,258 +154,193 @@
         Gato Game
     </span>
     <br><br>
-    <script>
-        const myImage = document.createElement('img');
 
-        myImage.src = 'https://user36342.na.imgto.link/public/20260925/1000146964.avif?__imgto_raw=1';
-        myImage.alt = 'kissa1';
-		myImage.className = "quiz-img";
+<!-- ==================== KISSA 1 OSION ALKU ==================== -->
+<div id="osio1">
+    <img src="https://user36342.na.imgto.link/public/20260925/1000146964.avif?__imgto_raw=1" alt="kissa1" class="quiz-img">
 
-        
-
-        
-        document.body.appendChild(myImage);
-    </script>
-
-<form id="quizForm1" onsubmit="return false;">
-
-  <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
-    <p>1. Este gato es muy gordo.</p>
-    <label class="option-label"><input type="radio" name="q1" value="Sí"> Sí</label><br>
-    <label class="option-label"><input type="radio" name="q1" value="No"> No</label><br>
-  </div>
-  <br><br>
-  <button type="button" onclick="laskePisteet1()">Tarkista vastaukset</button>
-</form>
-<br><br>
-<div id="tulos1"></div>
-<br><br>
-
-<script>
-     const img2 = document.createElement('img');
-    img2.src = 'https://user36365.na.imgto.link/public/20260925/unnamed.avif'; 
-	img2.className = "quiz-img";
-    
-    document.body.appendChild(img2);
-</script>
-
-<form id="quizForm2" onsubmit="return false;">
-
-  <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
-    <p>2. Este gato es muy gordo.</p>
-    <label class="option-label"><input type="radio" name="q2" value="Sí"> Sí</label><br>
-    <label class="option-label"><input type="radio" name="q2" value="No"> No</label><br>
-  </div>
-  <br><br>
-  <button type="button" onclick="laskePisteet2()">Tarkista vastaukset</button>
-</form>
-<br><br>
-<div id="tulos2"></div>
-<br><br>
-<script>
-     const img3 = document.createElement('img');
-    img3.src = 'https://user46828.na.imgto.link/public/20261021/bdbe4a3ce42b091597357c5d-screenshot-2026-10-21-120423.avif'; 
-	img3.className = "quiz-img";
-    
-    document.body.appendChild(img3);
-</script>
-
-<form id="quizForm3" onsubmit="return false;">
-
-  <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
-    <p>3. ¿Es este gato muy gordo?</p>
-    <label class="option-label"><input type="radio" name="q3" value="Sí"> Sí</label><br>
-    <label class="option-label"><input type="radio" name="q3" value="No"> No</label><br>
-  </div>
-  <br><br>
-  <button type="button" onclick="laskePisteet3()">Tarkista vastaukset</button>
-  </form>
-  <br><br>
-  <div id="tulos3"></div>
-  <br><br>
-<script>
-     const img4 = document.createElement('img');
-    img4.src = 'https://user46828.na.imgto.link/public/20261021/2791fd7ff55afb1f41d6abd7-screenshot-2026-10-21-145533.avif'; 
-	img4.className = "quiz-img";
-    
-    document.body.appendChild(img4);
-</script>
-	<form id="quizForm4" onsubmit="return false;">
-
-  <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
-    <p>4. ¿Es este gato un perro?</p>
-    <label class="option-label"><input type="radio" name="q4" value="Sí"> Sí</label><br>
-    <label class="option-label"><input type="radio" name="q4" value="No"> No</label><br>
-  </div>
-  <br><br>
-  <button type="button" onclick="laskePisteet4()">Tarkista vastaukset</button>
-</form>
-<br><br>
-<div id="tulos4" class="result-div"></div>
-<br><br>
-
-<div style="background: rgba(255, 255, 255, 0.95); padding: 25px; display: inline-block; border-radius: 12px; border: 3px dashed #111; min-width: 320px;">
-    <h3 style="color: #000; margin-top: 0;">Pelin lopputulos</h3>
-    <button type="button" onclick="laskeKaikkiPisteet()" style="background-color: #2563eb; color: white; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; border: none; cursor: pointer;">Katso kokonaispisteet</button>
-    <button type="button" onclick="nollaaPeli()" style="background-color: #4b5563; color: white; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; border: none; cursor: pointer; margin-left: 10px;">Pelaa uudelleen 🔄</button>
-    <div id="yhteistulos" style="margin-top: 15px; font-size: 18px;"></div>
+    <form id="quizForm1" onsubmit="return false;">
+      <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
+        <p>1. Este gato es muy gordo.</p>
+        <label class="option-label"><input type="radio" name="q1" value="Sí"> Sí</label><br>
+        <label class="option-label"><input type="radio" name="q1" value="No"> No</label><br>
+      </div>
+      <br><br>
+      <button type="button" onclick="laskePisteet1()">Tarkista vastaukset</button>
+    </form>
+    <br><br>
+    <div id="tulos1"></div>
+    <br><br>
+    <button type="button" id="seuraava1" style="display: none; background-color: #2563eb;" onclick="document.getElementById('osio1').style.display='none'; document.getElementById('osio2').style.display='block';">El siguiente gato ➡️</button>
 </div>
+<!-- ==================== KISSA 1 OSION LOPPU ==================== -->
+
+<!-- ==================== KISSA 2 OSION ALKU ==================== -->
+<div id="osio2">
+    <img src="https://user36365.na.imgto.link/public/20260925/unnamed.avif" alt="kissa2" class="quiz-img">
+
+    <form id="quizForm2" onsubmit="return false;">
+      <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
+        <p>2. Este gato es muy gordo.</p>
+        <label class="option-label"><input type="radio" name="q2" value="Sí"> Sí</label><br>
+        <label class="option-label"><input type="radio" name="q2" value="No"> No</label><br>
+      </div>
+      <br><br>
+      <button type="button" onclick="laskePisteet2()">Tarkista vastaukset</button>
+    </form>
+    <br><br>
+    <div id="tulos2"></div>
+    <br><br>
+    <button type="button" id="seuraava2" style="display: none; background-color: #2563eb;" onclick="document.getElementById('osio2').style.display='none'; document.getElementById('osio3').style.display='block';">El siguiente gato ➡️</button>
+</div>
+<!-- ==================== KISSA 2 OSION LOPPU ==================== -->
+
+<!-- ==================== KISSA 3 OSION ALKU ==================== -->
+<div id="osio3">
+    <img src="https://user46828.na.imgto.link/public/20261021/bdbe4a3ce42b091597357c5d-screenshot-2026-10-21-120423.avif" alt="kissa3" class="quiz-img">
+
+    <form id="quizForm3" onsubmit="return false;">
+      <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
+        <p>3. ¿Es este gato muy gordo?</p>
+        <label class="option-label"><input type="radio" name="q3" value="Sí"> Sí</label><br>
+        <label class="option-label"><input type="radio" name="q3" value="No"> No</label><br>
+      </div>
+      <br><br>
+      <button type="button" onclick="laskePisteet3()">Tarkista vastaukset</button>
+    </form>
+    <br><br>
+    <div id="tulos3"></div>
+    <br><br>
+    <button type="button" id="seuraava3" style="display: none; background-color: #2563eb;" onclick="document.getElementById('osio3').style.display='none'; document.getElementById('osio4').style.display='block';">El siguiente gato ➡️</button>
+</div>
+
+<div id="osio4">
+    <img src="https://user46828.na.imgto.link/public/20261021/2791fd7ff55afb1f41d6abd7-screenshot-2026-10-21-145533.avif" alt="kissa4" class="quiz-img">
+
+    <form id="quizForm4" onsubmit="return false;">
+      <div class="question" style="background: rgba(255, 255, 255, 0.9); padding: 20px; display: inline-block; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 2px solid #333;">
+        <p>4. ¿Es este gato un perro?</p>
+        <label class="option-label"><input type="radio" name="q4" value="Sí"> Sí</label><br>
+        <label class="option-label"><input type="radio" name="q4" value="No"> No</label><br>
+      </div>
+      <br><br>
+      <button type="button" onclick="laskePisteet4()">Tarkista vastaukset</button>
+    </form>
+    <br><br>
+    <div id="tulos4" class="result-div"></div>
+    <br><br>
+
+    <div style="background: rgba(255, 255, 255, 0.95); padding: 25px; display: inline-block; border-radius: 12px; border: 3px dashed #111; min-width: 320px;">
+        <h3 style="color: #000; margin-top: 0;">Pelin lopputulos</h3>
+        <button type="button" onclick="laskeKaikkiPisteet()" style="background-color: #2563eb; color: white; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; border: none; cursor: pointer;">Katso kokonaispisteet</button>
+        <button type="button" onclick="nollaaPeli()" style="background-color: #4b5563; color: white; padding: 12px 24px; font-size: 16px; font-weight: bold; border-radius: 6px; border: none; cursor: pointer; margin-left: 10px;">Pelaa uudelleen 🔄</button>
+        <div id="yhteistulos" style="margin-top: 15px; font-size: 18px;"></div>
+    </div>
+</div>
+
 <br><br>
 
 <script>
-// Tämä käsky kuuntelee koko sivua ja käynnistää taustaäänen heti, kun pelaaja klikkaa MITÄ TAHANSA kohtaa sivulla
 document.addEventListener('click', function() {
     var taustaMusiikki = document.getElementById('backgroundMusic');
-    // Soitetaan musiikki vain jos se ei vielä soi, jottei se ala alusta joka klikkauksella
-    if (taustaMusiikki.paused) {
+    if (taustaMusiikki && taustaMusiikki.paused) {
         taustaMusiikki.play();
     }
-}, { once: true }); // { once: true } varmistaa, että tämä koodi ajetaan vain kerran pelin alussa
+}, { once: true });
 
-let pisteet = [0, 0, 0, 0];
+let pisteet =[0, 0, 0, 0];
 
-
-// 1. Apufunktio vastauslaatikoiden dynaamiseen muotoiluun
 function muotoileTulos(teksti, vari, taustavari) {
-    return `<div style="
-        margin-top: 15px !important; 
-        padding: 12px !important; 
-        background-color: ${taustavari} !important; 
-        border: 2px solid ${vari} !important; 
-        border-radius: 8px !important; 
-        color: ${vari} !important; 
-        font-weight: bold !important; 
-        font-size: 15px !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-        display: block !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    ">${teksti}</div>`;
+    return `<div style="margin-top: 15px !important; padding: 12px !important; background-color: ${taustavari} !important; border: 2px solid ${vari} !important; border-radius: 8px !important; color: ${vari} !important; font-weight: bold !important; font-size: 15px !important; box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important; display: block !important; width: 100% !important; box-sizing: border-box !important;">${teksti}</div>`;
 }
 
-// 2. Kysymyksen 1 tarkistus
 function laskePisteet1() {
     const valittuVastaus = document.querySelector('input[name="q1"]:checked');
     const tulosElementti = document.getElementById("tulos1");
     const oikeaVastaus = "Sí";
-
-    if (!valittuVastaus) {
-        tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7");
-        return;
-    }
-
+    if (!valittuVastaus) { tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7"); return; }
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Sí, este gato es muy gordo. 🐱", "#15803d", "#f0fdf4");
-		document.getElementById('oikeinAani').play();
+        pisteet[0] = 1;
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
-		document.getElementById('vaarinAani').play();
+        pisteet[0] = 0;
     }
+    document.getElementById('seuraava1').style.display = 'inline-block';
 }
 
-// 3. Kysymyksen 2 tarkistus
 function laskePisteet2() {
     const valittuVastaus = document.querySelector('input[name="q2"]:checked');
     const tulosElementti = document.getElementById("tulos2");
     const oikeaVastaus = "Sí";
-
-    if (!valittuVastaus) {
-        tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7");
-        return;
-    }
-
+    if (!valittuVastaus) { tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7"); return; }
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Sí, este gato es muy gordo. 😊", "#15803d", "#f0fdf4");
-		document.getElementById('oikeinAani').play();
+        pisteet[1] = 1;
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
-		document.getElementById('vaarinAani').play();
+        pisteet[1] = 0;
     }
+    document.getElementById('seuraava2').style.display = 'inline-block';
 }
 
-// 4. Kysymyksen 3 tarkistus
 function laskePisteet3() {
     const valittuVastaus = document.querySelector('input[name="q3"]:checked');
     const tulosElementti = document.getElementById("tulos3");
     const oikeaVastaus = "Sí";
-
-    if (!valittuVastaus) {
-        tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7");
-        return;
-    }
-
+    if (!valittuVastaus) { tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7"); return; }
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Sí, este gato es muy gordo. 👍", "#15803d", "#f0fdf4");
-		document.getElementById('oikeinAani').play();
+        pisteet[2] = 1;
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
-		document.getElementById('vaarinAani').play();
+        pisteet[2] = 0;
     }
+    document.getElementById('seuraava3').style.display = 'inline-block';
 }
+
 function laskePisteet4() {
     const valittuVastaus = document.querySelector('input[name="q4"]:checked');
     const tulosElementti = document.getElementById("tulos4");
     const oikeaVastaus = "No";
-
-    if (!valittuVastaus) {
-        tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7");
-        return;
-    }
-
+    if (!valittuVastaus) { tulosElementti.innerHTML = muotoileTulos("⚠️ Valitse ensin jokin vastausvaihtoehto!", "#d97706", "#fef3c7"); return; }
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Si, este gato no es un perro! 🐱", "#15803d", "#f0fdf4");
-		document.getElementById('oikeinAani').play();
+        pisteet[3] = 1;
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
-		document.getElementById('vaarinAani').play();
+        pisteet[3] = 0;
     }
 }
-// 5. Yhteispisteiden laskeminen
+
 function laskeKaikkiPisteet() {
-    let score = 0;
-    let answered = 0;
-
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    if (q1) { answered++; if (q1.value === "Sí") score++; }
-
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    if (q2) { answered++; if (q2.value === "Sí") score++; }
-
-    const q3 = document.querySelector('input[name="q3"]:checked');
-    if (q3) { answered++; if (q3.value === "Sí") score++; }
-	
-	const q4 = document.querySelector('input[name="q4"]:checked');
-    if (q4) { answered++; if (q4.value === "No") score++; }
-
+    // Korjattu laskutapa käyttämään hakasulkeita listan indekseille
+    let score = pisteet[0] + pisteet[1] + pisteet[2] + pisteet[3];
     const finalResult = document.getElementById("yhteistulos");
-
-    if (answered < 4) {
-        finalResult.innerHTML = `<div style="padding:12px; background:#fef3c7; border:2px solid #d97706; color:#d97706; font-weight:bold; border-radius:8px; display:inline-block; margin-top:10px;">⚠️ Vastaa kaikkiin kysymyksiin! (${answered}/3 valittu)</div>`;
-        return;
-    }
-
-    if (score === 4) {
-        finalResult.innerHTML = `<div style="padding:12px; background:#f0fdf4; border:2px solid #15803d; color:#15803d; font-weight:bold; border-radius:8px; display:inline-block; margin-top:10px;">🎉 Täydellistä! Sait ${score}/4 oikein! 🐱🔥</div>`;
-    } else {
-        finalResult.innerHTML = `<div style="padding:12px; background:#fef2f2; border:2px solid #b91c1c; color:#b91c1c; font-weight:bold; border-radius:8px; display:inline-block; margin-top:10px;">Hienoa yritystä! Sait ${score}/4 oikein. 👍</div>`;
-    }
+    finalResult.innerHTML = `Sait ${score}/4 pistettä!`;
 }
 
-// 6. Pelin nollaustoiminto alusta aloittamista varten
 function nollaaPeli() {
     document.getElementById("quizForm1").reset();
     document.getElementById("quizForm2").reset();
     document.getElementById("quizForm3").reset();
-	document.getElementById("quizForm4").reset();
-
+    document.getElementById("quizForm4").reset();
     document.getElementById("tulos1").innerHTML = "";
     document.getElementById("tulos2").innerHTML = "";
     document.getElementById("tulos3").innerHTML = "";
-	document.getElementById("tulos4").innerHTML = "";
+    document.getElementById("tulos4").innerHTML = "";
     document.getElementById("yhteistulos").innerHTML = "";
-
-    pisteet = [0, 0, 0, 0];
+    document.getElementById('osio1').style.display = 'block';
+    document.getElementById('osio2').style.display = 'none';
+    document.getElementById('osio3').style.display = 'none';
+    document.getElementById('osio4').style.display = 'none';
+    document.getElementById('seuraava1').style.display = 'none';
+    document.getElementById('seuraava2').style.display = 'none';
+    document.getElementById('seuraava3').style.display = 'none';
+    pisteet =[0, 0, 0, 0];
 }
 </script>
 </body>
 </html>
+
+
