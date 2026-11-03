@@ -287,8 +287,10 @@ function laskePisteet1() {
 
     if (valittuVastaus.value === oikeaVastaus) {
         tulosElementti.innerHTML = muotoileTulos("🎉 Oikein! Sí, este gato es muy gordo. 🐱", "#15803d", "#f0fdf4");
+		document.getElementById('oikeinAani').play();
     } else {
         tulosElementti.innerHTML = muotoileTulos("❌ Väärin. Oikea vastaus oli " + oikeaVastaus + ".", "#b91c1c", "#fef2f2");
+		document.getElementById('vaarinAani').play();
     }
 }
 
