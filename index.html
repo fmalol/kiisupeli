@@ -124,9 +124,9 @@
 </head>
 <body>
 
-<div id="sanakirjaLaatikko" class="vocabulary-box">
-    <!-- Kun tätä painetaan, sanasto piiloutuu (none) ja avaamisnappi tulee näkyviin (block) -->
-    <button type="button" class="close-vocab-btn" onclick="document.getElementById('sanakirjaLaatikko').style.display='none'; document.getElementById('avaaSanastoNappi').style.display='block';">X</button>
+<div class="vocabulary-box">
+    <!-- Tämä nappi poistaa laatikon näkyvistä puhtaalla HTML:llä ilman riskiä pelin hajoamisesta -->
+    <button type="button" class="close-vocab-btn" onclick="this.parentElement.style.display='none';">X</button>
     <h3>Sanastoa 📝</h3>
     <ul>
         <li><strong>Este</strong> = Tämä</li>
@@ -175,7 +175,6 @@
 <br><br>
 <div id="tulos1"></div>
 <br><br>
-</script>
 
 <script>
      const img2 = document.createElement('img');
@@ -251,7 +250,7 @@
 <br><br>
 
 <script>
-let pisteet = [];
+let pisteet = ;
 
 
 // 1. Apufunktio vastauslaatikoiden dynaamiseen muotoiluun
